@@ -70,6 +70,13 @@ $ grep gigi /etc/passwd
 
 命令 | 功能 | 參數 | 功能||
 |:---:|:---:|:---:|:---:|:---:|
+|ps x|顯示目前使用者執行的所有程序|||
+|ps ax|顯示系統目前執行的所有程序，包括其他使用者的程序|||
+|ps u|顯示更詳細的程序資訊|||
+|ps w|顯示命令的全名，而非僅顯示一行以內的內容|||
+|kill ```pid```|終止程序|||
+|kill -STOP ```pid```|暫停程序|||
+|kill -CONT ```pid```|繼續執行|||
 |passwd|更改密碼|||
 |chsh|更改shell|||
 |||||
@@ -79,6 +86,52 @@ $ grep gigi /etc/passwd
 
 需要透過 ```ls -a``` 才能看到 .開頭的檔案，ex: .bashrc 。
 
-## 
+## 環境變數和Shell變數(不熟)
+
+## 命令路徑(不熟)
+
+## 特殊字元
+
+<kbd>ctrl</kbd> 通常以 ^ 來表示。 ex : ^C 代表 <kbd>ctrl</kbd>+<kbd>C</kbd>
+
+##　命令行編輯
+
+| 按鍵 | 功能 |
+|:---:|:---:|
+|<kbd>ctrl</kbd>+<kbd>B</kbd>|左移游標|
+|<kbd>ctrl</kbd>+<kbd>F</kbd>|右移游標|
+|<kbd>ctrl</kbd>+<kbd>P</kbd>|查看上一條命令|
+|<kbd>ctrl</kbd>+<kbd>N</kbd>|查看下一條命令|
+|<kbd>ctrl</kbd>+<kbd>A</kbd>|移動游標至行首|
+|<kbd>ctrl</kbd>+<kbd>E</kbd>|移動游標至行尾|
+|<kbd>ctrl</kbd>+<kbd>W</kbd>|刪除前一個詞|
+|<kbd>ctrl</kbd>+<kbd>U</kbd>|刪除游標至行首的內容|
+|<kbd>ctrl</kbd>+<kbd>K</kbd>|刪除游標至行尾的內容|
+|<kbd>ctrl</kbd>+<kbd>Y</kbd>|貼上以刪除的內容  ex : 貼上<kbd>ctrl</kbd>+<kbd>U</kbd>刪除的內容|
+
+## 說明文件
+
+- man 指令名
+- 指令名 --help
+- 指令名 -h
+- info ```command```
+- 上網找阿!
 
 
+## Shell輸入輸出
+
+```>```將執行內容寫進清空的file
+```
+$ command > file
+```  
+```>>```將執行內容寫進file的末尾
+```
+$ command >> file
+```  
+
+```2>```將執行錯誤的顯示文字輸出到err
+```
+$ errcommand >> file 2> err
+```  
+
+```<``` 重定向
